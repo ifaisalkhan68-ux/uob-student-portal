@@ -2,15 +2,13 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
-// Replace these with your own Firebase project config
-// (Firebase Console → Project Settings → General → Your apps → Web app)
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_PROJECT.firebaseapp.com',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_PROJECT.appspot.com',
-  messagingSenderId: 'YOUR_SENDER_ID',
-  appId: 'YOUR_APP_ID'
+  apiKey: "AIzaSyCX0zcBxVhQ3rC2gXzt9PCKPF6I1nZWiNQ",
+  authDomain: "uob-portal.firebaseapp.com",
+  projectId: "uob-portal",
+  storageBucket: "uob-portal.firebasestorage.app",
+  messagingSenderId: "696178120024",
+  appId: "1:696178120024:web:4c8bd20d136ee17153012d"
 }
 
 const app = initializeApp(firebaseConfig)
