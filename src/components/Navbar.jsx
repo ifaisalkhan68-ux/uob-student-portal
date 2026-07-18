@@ -14,8 +14,8 @@ export default function Navbar() {
     <header className="bg-green border-b-4 border-brass">
       <div className="max-w-4xl mx-auto px-5 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full seal-ring bg-green-dark flex items-center justify-center">
-            <span className="text-brass-light font-serif font-bold text-sm">UB</span>
+          <div className="w-9 h-9 rounded-full seal-ring overflow-hidden bg-white">
+            <img src="/icon-512.png" alt="University of Buner seal" className="w-full h-full object-cover" />
           </div>
           <div className="leading-tight">
             <p className="text-paper font-serif font-semibold text-base">{university.name}</p>
@@ -28,17 +28,4 @@ export default function Navbar() {
             <Link
               key={link.to}
               to={link.to}
-              className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
-                location.pathname === link.to
-                  ? 'bg-brass text-green-dark'
-                  : 'text-paper/80 hover:text-paper hover:bg-white/10'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </header>
-  )
-}
+              className={`px-3 py
