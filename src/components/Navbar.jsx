@@ -28,4 +28,17 @@ export default function Navbar() {
             <Link
               key={link.to}
               to={link.to}
-              className={`px-3 py
+              className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
+                location.pathname === link.to
+                  ? 'bg-brass text-green-dark'
+                  : 'text-paper/80 hover:text-paper hover:bg-white/10'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </header>
+  )
+}
