@@ -10,13 +10,31 @@ body {
   background-color: #F7F5F0;
   color: #3A3F44;
   font-family: 'Inter', system-ui, sans-serif;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/logo-watermark.png');
+  background-repeat: no-repeat;
+  background-position: center 15%;
+  background-size: min(420px, 70vw);
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 h1, h2, h3, .font-serif {
   font-family: 'Lora', Georgia, serif;
 }
 
-/* Visible keyboard focus for accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -35,7 +53,6 @@ select:focus-visible {
   }
 }
 
-/* Official-document style seal ring, used sparingly as the signature element */
 .seal-ring {
   border: 2px solid #B08D57;
   box-shadow: 0 0 0 4px #F7F5F0, 0 0 0 5px rgba(176, 141, 87, 0.3);
